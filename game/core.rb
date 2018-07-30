@@ -34,7 +34,7 @@ class Game
         session.dealer.hand = session.pack.shift(2)
         p "Карты дилера: #{session.dealer.hand.first}"
         session.gamer.hand = session.pack.shift(2)
-        p "Выши карты: #{session.gamer.hand}"
+        p "Ваши карты: #{session.gamer.hand}"
 
         strategy = CheckScore.new(session).call('init')
 
@@ -52,8 +52,8 @@ class Game
       def take_card(session)
         session.gamer.hand << session.pack.shift
 
-        p "Выши карты: #{session.gamer.hand}"
-        p "Выш счет: #{session.gamer.score}"
+        p "Ваши карты: #{session.gamer.hand}"
+        p "Ваш счет: #{session.gamer.score}"
       end
 
     private
