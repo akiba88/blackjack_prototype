@@ -7,7 +7,7 @@ class CheckScore
     case stage
     when 'init' then init_stage
     when 'continue' then continue_stage(user)
-    when 'finish' then finish_stage
+    # when 'finish' then finish_stage
     end
   end
 
@@ -34,10 +34,10 @@ private
     end
   end
 
-  def finish_stage
-    return 'lose' if session.gamer.score > 21
-    return 'draw' if session.gamer.score == session.dealer.score
+  # def finish_stage
+  #   return 'lose' if session.gamer.score > 21
+  #   return 'draw' if session.gamer.score == session.dealer.score
 
-    session.gamer.score > session.dealer.score ? 'win' : 'lose'
-  end
+  #   session.gamer.score > session.dealer.score ? 'win' : 'lose'
+  # end
 end
